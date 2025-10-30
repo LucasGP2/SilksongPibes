@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto Responsive</title>
+    <style>
+        body {
+            background-image: url(Imagenes/Fondo\ Principal.png);
+            background-size: 150vw 150vh;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        form {
+            width: 675px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px 30px;
+            box-sizing: border-box;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            font-size: 45px;
+            margin-bottom: 30px;
+        }
+
+        input, textarea {
+            width: 100%;
+            margin-bottom: 30px;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 25px;
+            border: none;
+        }
+
+        textarea {
+            min-height: 150px;
+            max-height: 300px;
+            max-width: 100%;
+            resize: vertical;
+        }
+
+        #boton {
+            background: #31384A;
+            color: #fff;
+            padding: 30px;
+            border: none;
+            width: 100%;
+            font-size: 25px;
+        }
+
+        #boton:hover {
+            cursor: pointer;
+            background: #2a3040;
+        }
+
+        @media (max-width: 770px) {
+            form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: rgb(182, 182, 214);">
+
+    <form action="https://formsubmit.co/lucasgokuvegetta@gmail.com" method="POST">
+        <h2>Contacto</h2>
+
+        <input type="text" name="Nombre" placeholder="Nombre" required />
+        <input type="email" name="Correo" placeholder="Correo" required />
+        <input type="tel" name="Teléfono" placeholder="Teléfono" />
+        <textarea name="Mensaje" placeholder="Escribe aquí tu mensaje" required></textarea>
+        
+        <button id="boton" type="submit">Enviar</button>
+
+        <!-- Campos ocultos de configuración -->
+        <input type="hidden" name="_next" value="https://tusitio.com/gracias.html"> <!-- URL a donde redirigir tras enviar -->
+        <input type="hidden" name="_captcha" value="false"> <!-- Desactiva el CAPTCHA -->
+    </form>
+
+</body>
+</html>
